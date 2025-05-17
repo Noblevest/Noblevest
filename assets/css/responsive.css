@@ -1,0 +1,365 @@
+
+/* Medium Layout: 1600px. */
+
+@media only screen and (min-width: 1442px) and (max-width: 1660px){
+    .header-area .header-right-image {
+        right: -5%;
+    }
+}
+/* Medium Layout: 1440px. */
+
+@media only screen and (min-width: 1367px) and (max-width: 1440px){
+    .header-area .header-right-image {
+        right: -10%;
+    }
+}
+/* Medium Layout: 1366px. */
+
+@media only screen and (min-width: 1201px) and (max-width: 1366px){
+    .header-area .header-right-image {
+        right: -15%;
+    }
+}
+/* Medium Layout: 1200px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .header-area .header-right-image {
+        right: -20%;
+    }
+}
+
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .header-area .header-right-image {
+        display: none;
+    }
+    .masonry-item{
+        width: 50%;
+    }
+    .single-complete-cases .thumbnail img,
+    .single-team-grid-two .thumbnail img,
+    .history-area .img-wrapper img{
+        width: 100%;
+    }
+    .single-price-plan,
+    .single-blog-grid-item{
+        margin-bottom: 30px;
+    }
+    .price-plan-area,
+    .blog-area{
+        padding-bottom: 90px;
+    }
+    .about-us-area .content-area,
+    .history-area .img-wrapper,
+    .content-area .img-wrapper ,
+    .single-contact-info-item{
+        margin-bottom: 30px;
+    }
+    .call-to-action-inner .right-content .btn-wrapper {
+        margin-top: 40px;
+    }
+    .service-groth .img-wrapper{
+        margin-top: 30px;
+    }
+    .service-sidebar{
+        margin-top: 60px;
+    }
+    .contact-info-area .section-title {
+        padding-top: 90px;
+    }
+}
+
+/* Tablet Layout wide: 768px. */
+
+@media only screen and (max-width: 767px){
+    .header-area .header-right-image {
+        display: none;
+    }
+    .masonry-item{
+        width: 50%;
+    }
+    .single-complete-cases .thumbnail img,
+    .single-team-grid-two .thumbnail img,
+    .history-area .img-wrapper img,
+    .single-blog-grid-item .thumbnail img{
+        width: 100%;
+    }
+    .single-price-plan,
+    .single-blog-grid-item{
+        margin-bottom: 30px;
+    }
+    .price-plan-area,
+    .blog-area,
+    .progress-area{
+        padding-bottom: 90px;
+    }
+    .about-us-area .content-area,
+    .history-area .img-wrapper,
+    .content-area .img-wrapper ,
+    .single-contact-info-item,
+    .single-cicle-progress-item{
+        margin-bottom: 30px;
+    }
+    .call-to-action-inner .right-content .btn-wrapper {
+        margin-top: 40px;
+    }
+    .service-groth .img-wrapper{
+        margin-top: 30px;
+    }
+    .service-sidebar{
+        margin-top: 60px;
+    }
+    .contact-info-area .section-title {
+        padding-top: 90px;
+    }
+    .header-area .subtitle {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .top-bar .left-content,
+    .top-bar .right-content{
+        display: block;
+        text-align: center;
+        float: none;
+        margin-bottom: 10px;
+    }
+    .header-area p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .call-to-action-inner .left-content .title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .call-to-action-inner .left-content .subtitle {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .single-case-study-details .project-details{
+        flex-wrap: wrap;
+    }
+    .single-case-study-details .project-details li{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .single-what-we-do-box .section-title {
+        margin-bottom: 55px;
+    }
+}
+
+/* medium tablet layout 599px */
+
+@media only screen and (max-width: 599px){
+    .section-title .title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .single-cicle-progress-item.white .title{
+        font-size: 18px;
+    }
+    .masonry-item {
+        width: 100%;
+    }
+    .header-area .subtitle {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .copyright-area-inner {
+        display: block;
+        text-align: center;
+    }
+    
+    .copyright-area-inner .copyright-text {
+        margin-bottom: 10px;
+    }
+    .header-area:after{
+        background-image: unset;
+    }
+    .call-to-action-inner {
+        display: block;
+    }
+    .call-to-action-inner .right-content .btn-wrapper {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width:415px) and (max-width: 450px){
+    .header-area {
+        padding: 240px 0 170px;
+    }
+    .header-area .title {
+        font-size: 48px;
+        line-height: 58px;
+    }
+    .header-area .subtitle {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .single-price-plan .price-header .icon {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .single-price-plan .price-header .price-wrap .price {
+        font-size: 40px;
+    }
+    .single-price-plan .price-header .price-wrap .sign {
+        top: -15px;
+    }
+    .call-to-action-inner .left-content .title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .single-blog-details .entry-footer{
+        display: block;
+    }
+    .single-blog-details .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+
+/* mobile tablet layout 414px */
+
+@media only screen and (max-width: 414px){
+    .header-area {
+        padding: 240px 0 170px;
+    }
+    .header-area .title {
+        font-size: 46px;
+        line-height: 56px;
+    }
+    .header-area .subtitle {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .single-price-plan .price-header .icon {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .single-price-plan .price-header .price-wrap .price {
+        font-size: 40px;
+    }
+    .single-price-plan .price-header .price-wrap .sign {
+        top: -15px;
+    }
+    .call-to-action-inner .left-content .title {
+        font-size: 26px;
+        line-height: 40px;
+    }
+    .single-blog-details .entry-footer{
+        display: block;
+    }
+    .single-blog-details .title,
+    .single-case-study-details .title,
+    .related-project .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .breadcrumb-area .page-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+}
+
+/* mobile tablet layout 375px */
+
+@media only screen and (max-width: 384px) {
+    .single-blog-grid-item .content .title {
+        font-size: 22px;
+        line-height: 34px;
+    }
+    .single-service-details .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .single-service-item-01{
+        display: block;
+        text-align: center;
+    }
+    .single-service-item-01 .thumbnail{
+        margin: 0 auto;
+    }
+    .section-title .title{
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .call-to-action-inner .left-content .title {
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .header-area .title {
+        font-size: 42px;
+        line-height: 50px;
+    }
+    .header-area .subtitle {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        display: block;
+    }
+}
+
+
+/* mobile tablet layout 360px */
+
+@media only screen and (max-width: 360px) {
+    .call-to-action-inner .left-content .title {
+        font-size: 26px;
+        line-height: 40px;
+    }
+    .call-to-action-inner .left-content .subtitle {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .breadcrumb-area .page-title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .single-blog-details .title, 
+    .single-case-study-details .title, .related-project .title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .accordion-wrapper .card .card-header a {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .comments-area .reply-title,
+     .comments-area .comment-reply-title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+    .top-bar .icon-list li {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+    }
+}
+
+
+/* mobile tablet layout 320px */
+
+@media only screen and (max-width: 330px){
+    .header-area .title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .single-service-item-01 .content .title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .single-service-details .title ,
+    .single-blog-details .title, 
+    .single-case-study-details .title, 
+    .related-project .title{
+        font-size: 25px;
+        line-height: 38px;
+    }
+    .comments-area .reply-title, 
+    .comments-area .comment-reply-title,
+    .comments-area .comments-title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+}

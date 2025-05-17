@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deposit - Noblevest</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-xl">
+    <h2 class="text-2xl font-bold text-center mb-4">Deposit USDT (BEP20)</h2>
+
+    <!-- Wallet Address Display -->
+    <div class="mb-4">
+      <label class="block text-sm font-medium">Send USDT to this address:</label>
+      <div class="flex items-center space-x-2 mt-1">
+        <input
+          type="text"
+          id="walletAddress"
+          value="0x62c690d89c2a548915B60CeB666a1f081aC6c5F6"
+          readonly
+          class="w-full px-3 py-2 border rounded-md bg-gray-100"
+        />
+        <button onclick="copyAddress()" class="bg-blue-600 text-white px-3 py-2 rounded">Copy</button>
+      </div>
+    </div>
+
+    <!-- QR Code -->
+    <div class="flex justify-center mb-6">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=0x62c690d89c2a548915B60CeB666a1f081aC6c5F6&size=150x150" alt="QR Code" />
+    </div>
+
+    <!-- Transaction Form -->
+    <form id="depositForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium">Amount (USDT)</label>
+        <input type="number" id="amount" class="w-full px-3 py-2 border rounded-md" required />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Transaction Hash (TXID)</label>
+        <input type="text" id="txid" class="w-full px-3 py-2 border rounded-md" required />
+      </div>
+      <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-md font-semibold">Submit Deposit</button>
+    </form>
+
+    <!-- Fiat to USDT Onramp -->
+    <div class="mt-6">
+      <p class="text-center font-medium mb-2">Or buy USDT with card or bank:</p>
+      <iframe
+        src="https://widget.onramper.com?apiKey=YOUR_ONRAMPER_API_KEY&defaultCrypto=USDT_BSC&wallets=USDT_BSC:0x62c690d89c2a548915B60CeB666a1f081aC6c5F6"
+        height="500px"
+        width="100%"
+        frameborder="0"
+        allow="accelerometer; autoplay; camera; gyroscope; payment"
+        title="Onramper widget">
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    function copyAddress() {
+      const copyText = document.getElementById("walletAddress");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Wallet address copied to clipboard");
+    }
+
+    document.getElementById("depositForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const amount = document.getElementById("amount").value;
+      const txid = document.getElementById("txid").value;
+      const userID = "CURRENT_USER_ID_HERE"; // Replace with dynamic user ID from Firebase auth/session
+
+      // Example Firebase POST (to be replaced with actual integration)
+      fetch("https://your-firebase-function-endpoint/deposit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userID, amount, txid }),
+      })
+        .then(res => res.json())
+        .then(data => {
+          alert("Deposit submitted! Waiting for admin approval.");
+        })
+        .catch(err => {
+          console.error(err);
+          alert("Error submitting deposit.");
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<title>Noblevest Admin Login</title>
+</head>
+<body>
+  <h2>Admin Login Page</h2>
+  <!-- Add your login form here -->
+        <!-- navbar area start -->
+        <nav class="navbar navbar-area navbar-expand-lg nav-absolute">
+            <div class="container nav-container">
+                <div class="navbar-brand">
+                    <!--<a href="?a=home" class="site-logo"><img src="assets/img/logo.png" alt="logo image"></a>-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bausins_main_menu" aria-controls="bausins_main_menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="bausins_main_menu">
+                    <ul class="navbar-nav">
+                        <li class="current-menu-item"><a href="index.html?a=home">Home</a></li>
+                        <li><a href="indexabout.html?a=cust&amp;page=aboutus">About</a></li>
+                        <li> <a href="indexnews.html?a=news">News</a></li>
+                        <li><a href="indexfaq.html?a=faq">Faq</a></li>                       
+                        <li> <a href="indexlogin.html?a=login">Login</a></li>
+                        <li><a href="indexsignup.html?a=signup">Signup</a></li>
+                        <li><a href="indexcontact.html?a=support">Contact</a></li>
+                        <li><a href="indexterms.html?a=terms">Terms</a></li>
+                  </ul>
+                </div>
+            </div>
+        </nav>
+        
+         <div class="breadcrumb-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb-inner">
+                            <div class="left-content-area">
+                             
+
+<h1 class="page-title">Login</h1>
+                                <p>Our program is intended for people willing to achieve their financial freedom but unable to do so because they're not financial experts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ </div>
+
+<script language=javascript>
+function checkform() {
+  if (document.mainform.username.value=='') {
+    alert("Please type your username!");
+    document.mainform.username.focus();
+    return false;
+  }
+  if (document.mainform.password.value=='') {
+    alert("Please type your password!");
+    document.mainform.password.focus();
+    return false;
+  }
+  return true;
+}
+</script>
+
+
+<div class="container padding-bottom-115 ">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title desktop-center margin-bottom-30 padding-top-115">
+                    <h2 class="title">Member <span>Login</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6"  style="background: #e9ecef;padding: 30px 30px;">
+                <div class="contact-form-wrapper">
+
+<form method=post name=mainform onsubmit="return checkform()"><input type="hidden" name="form_id" value="17468348862361"><input type="hidden" name="form_token" value="fd1ba95fc32019769c33e30121fe1b12">
+<input type=hidden name=a value='do_login'>
+<input type=hidden name=follow value=''>
+<input type=hidden name=follow_id value=''>
+<div class="row">
+                           <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text"  name="username" value='' class="form-control" placeholder="Username" >
+                                </div>
+                           </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="password" name="password"  class="form-control"  placeholder="Password" value=''>
+                                </div>
+                           </div>
+
+
+
+
+<div class="col-lg-12 text-center">
+    <a href="indexforgotpasword.html?a=forgot_password"><b>Click here to Retrieve your forgotten password</b></a>.<br><br>
+                                <div class="form-group submit-btn">
+                                    <button class="submit-btn" type="submit">Login</button>
+                                </div>
+                           </div>
+                         </div>
+</form>
+  <!-- 🔐 Auto-create Admin Script -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+    import { getDatabase, ref, get, set } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCONi3nIydG-pkOJ6BYVnQNZdivm29EQxs",
+      authDomain: "noblevest-c34f8.firebaseapp.com",
+      databaseURL: "https://noblevest-c34f8-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "noblevest-c34f8",
+      storageBucket: "noblevest-c34f8.firebasestorage.app",
+      messagingSenderId: "21233910810",
+      appId: "1:21233910810:web:c7e7fe98566ebb61adfda3",
+      measurementId: "G-DRTN7D1ZTJ"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getDatabase(app);
+
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        const adminsRef = ref(db, "admins");
+        const snapshot = await get(adminsRef);
+
+        if (!snapshot.exists()) {
+          await set(ref(db, `admins/${user.uid}`), true);
+          alert("✅ You have been added as the first Admin.");
+          console.log("Admin UID set:", user.uid);
+        } else {
+          console.log("Admin(s) already exist:", snapshot.val());
+        }
+      } else {
+        console.warn("No user is signed in.");
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Admin Login</h2>
+<form id="loginForm">
+  <input type="email" id="email" placeholder="Admin Email" required><br>
+  <input type="password" id="password" placeholder="Password" required><br>
+  <button type="submit">Login</button>
+</form>
+<script>
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+const firebaseConfig = {
+apiKey: "YOUR_API_KEY",
+authDomain: "YOUR_PROJECT.firebaseapp.com",
+projectId: "YOUR_PROJECT_ID",
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
+e.preventDefault();
+const email = document.getElementById("email").value;
+const password = document.getElementById("password").value;
+
+try {
+  await signInWithEmailAndPassword(auth, email, password);
+  location.href = "admin-dashboard.html";
+} catch (error) {
+  alert("Login failed: " + error.message);
+}
+});import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+
+const firebaseConfig = {
+apiKey: "YOUR_API_KEY",
+authDomain: "YOUR_PROJECT.firebaseapp.com",
+projectId: "YOUR_PROJECT_ID",
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+onAuthStateChanged(auth, async (user) => {
+if (!user) {
+  window.location.href = "login.html";
+  return;
+}
+
+const depositsSnap = await getDocs(collection(db, "deposits"));
+const withdrawalsSnap = await getDocs(collection(db, "withdrawals"));
+
+depositsSnap.forEach(doc => {
+  const data = doc.data();
+  document.querySelector("#allDepositsTable tbody").innerHTML += `
+    <tr><td>${data.user}</td><td>${data.amount}</td><td>${data.date}</td></tr>
+  `;
+});
+
+withdrawalsSnap.forEach(doc => {
+  const data = doc.data();
+  document.querySelector("#allWithdrawalsTable tbody").innerHTML += `
+    <tr><td>${data.user}</td><td>${data.amount}</td><td>${data.date}</td></tr>
+  `;
+});
+});
+
+document.getElementById("logoutBtn").addEventListener("click", () => {
+signOut(auth).then(() => {
+  window.location.href = "login.html";
+});
+});
